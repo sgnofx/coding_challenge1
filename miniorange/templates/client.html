@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Client-Side</title>
+    </head>
+    <body>
+        {% if username %}
+        <h2>Welcome {{username}}</h2>
+        {% else %}
+        <h2>CLIENT HERE</h2>
+        <p>LOGIN VIA BELOW LINK</p>
+        <a href="{{insert_link}}">LOGIN</a>
+        {% if error %}
+        <h2>Invalid Client-ID or Return-URI</h2>
+        {% endif %}
+        {% endif %}
+    </body>
+</html>

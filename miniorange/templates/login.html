@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+
+        <h2>LOGIN HERE</h2>
+        <form action = "{% url 'authenticator:login' %}" method="post">
+            {% csrf_token %}
+            <label for = 'username'>Username:</label>
+            <input type="text" name="username" placeholder="Enter Username">
+            <label for = 'password'>Password:</label>
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="hidden" name="client_id" value="{{client_id}}">
+            <input type="hidden" name="return_uri" value="{{return_uri}}">
+            <input type="submit" name="login" value="Login">
+        </form>
+        {% if credentials %}
+        <h2>Invalid username or password</h2>
+        {% endif %}
+        {% if token %}
+        <h2>Token validation failure</h2>
+        {% endif %}
+        {% if issuer %}
+        <h2>Invalid Issuer</h2>
+        {% endif %}
+    </body>
+</html>

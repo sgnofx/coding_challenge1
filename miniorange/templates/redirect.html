@@ -1,0 +1,8 @@
+<p>Redirecting you to client</p>
+<!-- <h1>Saml Page</h1> -->
+
+<form name="myForm"action="{% url 'challenge1:callback' %}" method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="Response" value="{{response}}">
+</form>
+<body onload="document.myForm.submit()"></body>
