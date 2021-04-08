@@ -11,6 +11,13 @@ Authenticator webpage - it will check various conditions and a login form will b
 Credentials to be enetered - username: yash, password: abcd
 After this we will be redirected to client page with username displayed
 
+STEPS FOR RUNNING THE SERVER:
+1.install required libraries, there is requirement.txt file which can be used to install required libraries by command "pip install -r requirements.txt"
+2.after successfull installation run the server by command : python manage.py runserver
+3.then go the specified URL (mostly http://127.0.0.1:8000/)
+4.then click on login
+5.enter credentials as (username: yash, password: abcd) on login page
+
 Some screenshots of the flow and code
 
 1. Client Page
